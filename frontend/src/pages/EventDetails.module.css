@@ -1,65 +1,122 @@
 .eventDetailsContainer {
-    max-width: 600px;
-    margin: auto;
-    margin-top: 100px;
-    padding: 20px;
-    background-color: #1f2233;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #1f2233;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  text-align: center; /* ✅ Center-align content */
+}
+
+.eventImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.eventDetailsTitle {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.eventDetailsInfo,
+.eventDetailsDescription {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.eventDetailsAttendees {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ✅ Style for Join Event Button */
+.eventButton {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.eventButton:hover {
+  background-color: #d43f3f;
+}
+
+/* ✅ Container for Update & Delete Buttons */
+.creatorActions {
+  display: flex;
+  justify-content: space-between; /* ✅ Space between buttons */
+  margin-top: 15px;
+}
+
+/* ✅ Update (Edit) Button */
+.updateButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  flex: 1;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.updateButton:hover {
+  background-color: #0056b3;
+}
+
+/* ✅ Delete Button */
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  flex: 1;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.deleteButton:hover {
+  background-color: #b52a37;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .eventDetailsContainer {
+    width: 90%;
+    padding: 15px;
   }
-  
-  .eventImage {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
+
   .eventDetailsTitle {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 24px;
   }
-  
-  .eventDetailsInfo, .eventDetailsDescription {
-    font-size: 18px;
-    margin-bottom: 8px;
+
+  .eventDetailsInfo {
+    font-size: 14px;
   }
-  
-  .eventDetailsAttendees {
-    font-size: 18px;
-    margin-top: 10px;
+
+  /* ✅ Stack buttons on smaller screens */
+  .creatorActions {
+    flex-direction: column;
   }
-  
-  .eventButton {
-    background-color: #ff4c4c;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
+
+  .updateButton,
+  .deleteButton {
     width: 100%;
-    margin-top: 15px;
+    margin: 5px 0;
   }
-  
-  .eventDetailsBackBtn:hover {
-    background: #0056b3;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    .eventDetailsContainer {
-      width: 90%;
-      padding: 15px;
-    }
-  
-    .eventDetailsTitle {
-      font-size: 24px;
-    }
-  
-    .eventDetailsInfo {
-      font-size: 14px;
-    }
-  }
-  
+}

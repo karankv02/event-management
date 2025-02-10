@@ -13,7 +13,7 @@ function EventDetails() {
   useEffect(() => {
     // Get logged-in user ID from localStorage
     const user = JSON.parse(localStorage.getItem("user"));
-    setUserId(user?._id);
+    setUserId(user?.id);
 
     const fetchEvent = async () => {
       try {
@@ -40,7 +40,7 @@ function EventDetails() {
       // Update UI after RSVP
       setEvent((prevEvent) => ({
         ...prevEvent,
-        attendees: [...prevEvent.attendees, "newUser"], // Simulating new attendee
+        attendees: [...prevEvent.attendees, userId], // Simulating new attendee
       }));
     } catch (error) {
       alert(error.response?.data?.msg || "Error joining event");
@@ -61,7 +61,7 @@ function EventDetails() {
   };
 
   const handleUpdate = () => {
-    navigate(`/edit-event/${id}`); // Redirect to event edit page (you'll need to create this)
+    navigate(`/edit-event/${id}`); 
   };
 
   if (!event) return <p>Loading event details...</p>;
@@ -85,9 +85,9 @@ function EventDetails() {
       <button onClick={() => handleRSVP(event._id)} className={styles.eventButton}>Join Event</button>
 
       {/* Show Delete and Update Buttons Only for the Creator */}
-      {userId === event.createdBy?._id && (
+      {userId && event.createdBy && (userId === event.createdBy._id || userId === event.createdBy) && (
         <div className={styles.creatorActions}>
-          <button onClick={handleUpdate} className={styles.updateButton}>Edit Event</button>
+          
           <button onClick={handleDelete} className={styles.deleteButton}>Delete Event</button>
         </div>
       )}

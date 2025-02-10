@@ -123,7 +123,7 @@ router.post("/:id/rsvp", authMiddleware, async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const event = await Event.findById(req.params.id)
-      .populate("createdBy", "name email") // ✅ Ensure event creator's details are included
+      .populate("createdBy", "name _id") // ✅ Ensure event creator's details are included
       .populate("attendees", "name email");
 
     if (!event) return res.status(404).json({ msg: "Event not found" });
