@@ -1,0 +1,26 @@
+/* Button.css */
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button.blue {
+    background-color: #007bff;
+  }
+  
+  .button.blue:hover {
+    background-color: #0056b3;
+  }
+  
+  .button.red {
+    background-color: #dc3545;
+  }
+  
+  .button.red:hover {
+    background-color: #c82333;
+  }
+  

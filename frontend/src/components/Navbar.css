@@ -1,0 +1,64 @@
+/* Floating Centered Navbar */
+.navbar {
+  position: absolute;
+  top: 20px; /* Floating effect */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent */
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Navigation Links */
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover Effects */
+.nav-link:hover {
+  color: #ff416c;
+}
+
+/* Login/Register Button */
+.navbar button {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 8px 18px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-left: 15px;
+}
+
+.navbar button:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-link {
+    margin: 8px 0;
+  }
+}

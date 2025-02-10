@@ -1,0 +1,65 @@
+.eventDetailsContainer {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #1f2233;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .eventImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .eventDetailsTitle {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .eventDetailsInfo, .eventDetailsDescription {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .eventDetailsAttendees {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .eventButton {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .eventDetailsBackBtn:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .eventDetailsContainer {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .eventDetailsTitle {
+      font-size: 24px;
+    }
+  
+    .eventDetailsInfo {
+      font-size: 14px;
+    }
+  }
+  

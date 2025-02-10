@@ -1,0 +1,91 @@
+.modalOverlay {
+  position: fixed;
+  top: -80px;
+  left: -319px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+/* Modal Content - Form Container */
+.modalContent {
+  background: #2c2f3f; /* Dark card background */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 400px;
+  color: #fff; /* White text */
+}
+
+/* Close Button */
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.closeBtn:hover {
+  color: #ff4d4d;
+}
+
+/* Form Styling */
+.eventForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Input Fields */
+.eventForm input,
+.eventForm textarea {
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #1f2233;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+/* Focused Inputs */
+.eventForm input:focus,
+.eventForm textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Textarea Styling */
+.eventForm textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Submit Button */
+.eventbtn {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.eventbtn:hover {
+  background: #0056b3;
+}

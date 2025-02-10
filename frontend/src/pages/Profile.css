@@ -1,0 +1,126 @@
+/* Profile.css - Dark Themed Styling */
+
+/* Profile Container */
+.profile-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(35, 48, 68, 1); /* Dark card background */
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff; /* White text */
+  }
+  
+  /* Headings */
+  .profile-container h2 {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .profile-container h3 {
+    font-size: 20px;
+    color: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Profile Info */
+  .profile-container p {
+    font-size: 16px;
+    color: #bbb;
+    margin: 8px 0;
+  }
+  
+  /* Form Styling */
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+    padding: 10px;
+  }
+  
+  .profile-form input {
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #4d5868;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .profile-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+  }
+  
+  /* Update Button */
+  .profile-button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .profile-button:hover {
+    background: #0056b3;
+  }
+  
+  /* Event List */
+  .profile-event-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .profile-event-card {
+    background: #4d5868;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+  
+  .profile-event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .profile-event-card h2 {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .profile-event-card p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0;
+  }
+  
+  /* Logout Button */
+  .profile-logout {
+    background: #d9534f;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .profile-logout:hover {
+    background: #c9302c;
+  }
+  
