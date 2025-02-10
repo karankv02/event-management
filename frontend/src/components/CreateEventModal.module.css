@@ -1,7 +1,7 @@
 .modalOverlay {
   position: fixed;
   top: -80px;
-  left: -319px;
+  left: -350px;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);

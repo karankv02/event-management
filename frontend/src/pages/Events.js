@@ -72,6 +72,9 @@ function Events() {
 
   // Function to filter events
   useEffect(() => {
+    console.log("Applying filter:", filter);
+    console.log("Selected Date:", selectedDate);
+    console.log("All Events:", events);
     let updatedEvents = [...events];
 
     if (filter === "joined") {
@@ -87,7 +90,7 @@ function Events() {
         (event) => new Date(event.date).toISOString().split("T")[0] === selectedDate
       );
     }
-
+    console.log("Filtered Events:", updatedEvents);
     setFilteredEvents(updatedEvents);
   }, [filter, selectedDate, events, userId]);
 
@@ -135,10 +138,10 @@ function Events() {
 
       {/* Event List */}
       <ul className="event-list">
-        {events.length === 0 ? (
+        {filteredEvents.length === 0 ? (
           <p>No events found.</p>
         ) : (
-          events.map((event) => (
+          filteredEvents.map((event) => (
             <li key={event._id} className="event-card">
               <h2>{event.title}</h2>
               <p ><strong>Created By:</strong> {event.createdBy?.name || "Unknown"}</p>

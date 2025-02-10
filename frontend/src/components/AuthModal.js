@@ -31,10 +31,17 @@ function AuthModal({ isOpen, onClose, onAuthSuccess }) {
 
     try {
       const res = await axios.post(url, payload);
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", JSON.stringify(res.data.user));
-      onAuthSuccess(); 
-      onClose(); 
+
+      if (isLogin) {
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+        onAuthSuccess();
+        onClose();
+      } else {
+        alert("Registration successful! Please log in.");
+        setIsLogin(true); // ✅ Switch to Login form after registration
+        setFormData({ name: "", email: "", password: "" }); // ✅ Reset form fields
+      }
     } catch (error) {
       alert(error.response?.data?.msg || "Authentication failed");
     }
